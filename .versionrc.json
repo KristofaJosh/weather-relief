@@ -1,0 +1,14 @@
+{
+    "types": [
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "chore", "section": "Chore" },
+        { "type": "docs", "section": "Documentation" },
+        { "type": "style", "section": "UI" },
+        { "type": "refactor", "section": "Refactor" },
+        { "type": "perf", "hidden": true },
+        { "type": "test", "hidden": true }
+    ],
+    "commitUrlFormat": "https://github.com/KristofaJosh/weather-relief/commits{{hash}}",
+    "compareUrlFormat": "https://github.com/KristofaJosh/weather-relief/compare/{{previousTag}}...{{currentTag}}"
+}
