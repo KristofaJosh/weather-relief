@@ -1,0 +1,22 @@
+.frostCard {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 4px 7px 0 #00000033;
+  overflow: hidden;
+  background: inherit;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    z-index: -1;
+    filter: blur(70px);
+    box-shadow: inset 0 0 3rem rgba(255, 255, 255);
+  }
+}
