@@ -1,0 +1,73 @@
+.App {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.f12 {
+  font-size: var(--f12);
+}
+
+.f14 {
+  font-size: var(--f14);
+}
+
+.f16 {
+  font-size: var(--f16);
+}
+
+.f18 {
+  font-size: var(--f18);
+}
+
+.f22 {
+  font-size: var(--f22);
+}
+
+.f28 {
+  font-size: var(--f27);
+}
+
+.f32 {
+  font-size: var(--f32);
+}
+
+.medium {
+  font-size: var(--f-med);
+}
+
+
+.large {
+  font-size: var(--f-large);
+}
+
+.spin {
+  animation: spinner infinite 3s cubic-bezier(0, 1.37, 0.55, 0.44);
+}
+
+.beep {
+  animation: beep-bop infinite 1s ease-out;
+}
+
+.div-p-decorate {
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes beep-bop {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}

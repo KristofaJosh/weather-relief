@@ -1,0 +1,109 @@
+.page {
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 150px));
+  gap: 15px;
+  justify-content: space-between;
+
+  &__home {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__greeting {
+    display: grid;
+    gap: 30px;
+    grid-template-rows: 1fr auto;
+
+    &_message {
+      text-transform: capitalize;
+      line-height: 1;
+
+      p:nth-child(1) {
+        font-size: var(--f-med);
+      }
+
+      @media screen and (min-width: 768px) {
+        p:nth-child(1) {
+          font-size: var(--f-large);
+        }
+      }
+    }
+  }
+}
+
+.note {
+  display: grid;
+  gap: 20px;
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+
+    > label {
+      font-weight: 600;
+    }
+
+    > input {
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid var(--black);
+      padding: 5px 10px;
+    }
+
+    > textarea {
+      padding: 5px 10px;
+      font-family: Arial, serif;
+      font-size: 13px;
+      resize: vertical;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    button:nth-child(2) {
+      background-color: red;
+    }
+  }
+
+  &__wrapper {
+    columns: 6 200px;
+    column-gap: 1rem;
+
+    > div {
+      margin: 0 1rem 1rem 0;
+      display: inline-block;
+      width: 100%;
+    }
+
+    &_notes {
+      padding: 10px !important;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .div-p-decorate {
+      margin-bottom: 10px;
+
+      > p {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+  }
+}
