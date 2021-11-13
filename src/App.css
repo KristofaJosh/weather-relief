@@ -1,6 +1,7 @@
 .App {
   min-height: 100vh;
   height: 100%;
+  padding-bottom: 100px;
 }
 
 .f12 {
