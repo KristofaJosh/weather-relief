@@ -1,25 +1,6 @@
 import {createAsyncThunk, createSlice, isAnyOf, PayloadAction} from "@reduxjs/toolkit";
 import api from "../../../../utils/apis";
 
-export const getWeatherReport = createAsyncThunk(
-  "authentication/loginStatus",
-  async (entry: any, { rejectWithValue }) => {
-    try {
-      const response = await api.all();
-      return {
-        ...response.data,
-      };
-    } catch (error: any) {
-      if (error) {
-        return rejectWithValue({
-          message: `${error.response?.data?.error || error?.response?.message}`,
-        });
-      }
-      throw error;
-    }
-  }
-);
-
 export const refreshWeather = createAsyncThunk(
   "refresh",
   async (currentLoc: string) => {
@@ -82,9 +63,6 @@ export const weatherSlice = createSlice({
   },
 
   extraReducers: (builder) => {
-    builder.addCase(getWeatherReport.fulfilled, (state, action) => {
-      state.defaultLoc = action.payload;
-    });
     builder.addMatcher(
       isAnyOf(getSingleCity.fulfilled, refreshWeather.fulfilled),
       (state, action) => {

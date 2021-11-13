@@ -1,8 +1,6 @@
 import weatherRequest from "./request";
 
-export const eventsUrl = "/events";
 const api = {
-  all: () => weatherRequest({ url: eventsUrl, method: "get" }),
   getCity: (location: string, hardRefresh?: boolean) =>
     weatherRequest(
       { url: "/current", params: { query: location } },

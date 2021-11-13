@@ -8,6 +8,14 @@ export const axiosInstance = axios.create({
   timeout: 30000,
 });
 
+/**
+ * Request Handler
+ * @param config
+ * @param hardRefresh
+ * @example
+ *  To make a fresh request, set hardRefresh param to true,
+ *  To cache and use cached request, leave hardRefresh as false
+ */
 const weatherRequest = (
   config: AxiosRequestConfig,
   hardRefresh: boolean = false
