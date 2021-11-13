@@ -29,6 +29,7 @@ const Note = ({
 }) => {
   const dispatch = useAppDispatch();
   const [form, setForm] = useState({ title: '', description: '' });
+  const [formError, setError] = useState('');
 
   const handleCreateNote = () => {
     if (noteId && form.description) {
@@ -40,6 +41,8 @@ const Note = ({
         closeModal();
       }
       setForm({ title: '', description: '' });
+    } else {
+      setError('form description cannot be empty');
     }
   };
 
@@ -49,6 +52,7 @@ const Note = ({
   };
 
   const handleNoteChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (formError) setError('');
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -68,6 +72,7 @@ const Note = ({
         <div className={style.note__input}>
           <label htmlFor={'description'}>Description</label>
           <textarea rows={8} id={'description'} name={'description'} value={form.description} onChange={handleNoteChange} />
+          {formError && <small style={{color: 'red', fontSize: 10}}>{formError}</small>}
         </div>
       </form>
       <div className={style.note__button}>
@@ -100,7 +105,7 @@ const Detail = () => {
   };
 
   const clearAllNotes = (key: string) => () => {
-    if(notes.hasOwnProperty(key) && notes[key].length) {
+    if (notes.hasOwnProperty(key) && notes[key].length) {
       let proceedings = prompt(`This will clear all Notes\nType 'delete_all' to continue deletion?`, '');
       if (proceedings === 'delete_all') {
         dispatch(clearNotes({ key }));
