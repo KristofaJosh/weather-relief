@@ -1,5 +1,8 @@
 ## Weather Relief
-![app](./face.png)
+![morning](./face.png)
+![noon](./noon.png)
+![evening](./evening.png)
+![night](./night.png)
 
 ### How to run the project (Getting started)
 ```shell
