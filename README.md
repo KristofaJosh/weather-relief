@@ -1,4 +1,5 @@
 ## Weather Relief
+![app](./face.png)
 
 ### How to run the project (Getting started)
 ```shell
@@ -13,6 +14,7 @@ yarn start
 ```
 ### Info about deployment
 An app to look up **current weather** information for cities around the world.
+- background update
 - View weather from 15 largest cities in the world
 - Add notes and create favourite city on search
 
