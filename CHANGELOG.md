@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/KristofaJosh/weather-relief/compare/v1.0.0...v1.1.0) (2021-11-13)
+
+
+### Bug Fixes
+
+* add redirect for netlify hosting ([27ba29b](https://github.com/KristofaJosh/weather-relief/commits27ba29b24cdcaddc1d20e72984a5338c41d74dd0))
+* improve components ([87c1598](https://github.com/KristofaJosh/weather-relief/commits87c1598043e1027619d4dd2663fcfc8688c73785))
+
+
+### Chore
+
+* add .env sample file ([e098735](https://github.com/KristofaJosh/weather-relief/commitse0987351f1eee380fa6ef3a74ece3f58ac8ece4c))
+
+
+### UI
+
+* fix styling for responsiveness ([c8abc9b](https://github.com/KristofaJosh/weather-relief/commitsc8abc9bee133dc5ce82979cdf4f83b8582248b24))
+
 ## 1.0.0 (2021-11-11)
 
 
