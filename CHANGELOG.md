@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/KristofaJosh/weather-relief/compare/v1.2.0...v1.3.0) (2021-11-13)
+
+
+### Chore
+
+* update readme file ([22dacba](https://github.com/KristofaJosh/weather-relief/commits22dacba139cad242983c93c7889db8478a70bd61))
+
 ## [1.2.0](https://github.com/KristofaJosh/weather-relief/compare/v1.1.0...v1.2.0) (2021-11-13)
 
 
