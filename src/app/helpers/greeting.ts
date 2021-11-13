@@ -1,6 +1,4 @@
-export const greeting = () => {
-  const hour = new Date().getHours();
-
+export const greeting = (hour = new Date().getHours()) => {
   let period;
 
   if (hour >= 0 && hour < 12) {

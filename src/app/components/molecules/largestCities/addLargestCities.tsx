@@ -8,7 +8,7 @@ import { thousandsSeparators } from "../../../helpers/thousanSandSeparators";
 import { locationType } from "../../../store/reducers/types";
 import api from "../../../../utils/apis";
 import { filterLargestCities } from "../../../helpers/filterLargestCities";
-import { addToLargestCity } from "../../../store/reducers/favourites/fav.reducer";
+import { addToLargestCity } from "../../../store/reducers/favourites/favouriteSlice";
 import { excludeFromList } from "../../../helpers/excludeFromList";
 
 const AddLargeCities = ({ onClose }: { onClose: () => void }) => {

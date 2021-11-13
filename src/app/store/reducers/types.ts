@@ -1,10 +1,10 @@
 export type locationType = {
   request: {
-    type: string,
-    query: string,
-    language: string,
-    unit: string,
-  },
+    type: string;
+    query: string;
+    language: string;
+    unit: string;
+  };
   location: {
     country: string;
     name: string;
@@ -14,7 +14,7 @@ export type locationType = {
     population: number;
   };
   current: {
-    is_day: boolean;
+    is_day: string | boolean;
     feelslike: string;
     humidity: string;
     temperature: string;
@@ -27,4 +27,12 @@ export type locationType = {
     wind_dir: string;
     wind_speed: string;
   };
+};
+
+export type noteTypeBody = { title: string; description: string }
+export type noteType = {
+  [k in string]: {
+    idx: string;
+    body: noteTypeBody;
+  }[];
 };

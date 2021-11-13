@@ -4,15 +4,15 @@ import style from "./largest.module.scss";
 import Typography from "../../elements/typography";
 import { useAppDispatch, useAppSelector } from "../../../store";
 import { IconAdd, IconUsers } from "../../../assets/icons";
-import { setLargestCity } from "../../../store/reducers/favourites/fav.actions";
 import { sortCities } from "../../../helpers/sortCities";
 import { thousandsSeparators } from "../../../helpers/thousanSandSeparators";
 import { locationType } from "../../../store/reducers/types";
 import { useNavigate } from "react-router-dom";
 import Modal from "../../elements/modal";
 import AddLargeCities from "./addLargestCities";
-import { removeFromLargestCity } from "../../../store/reducers/favourites/fav.reducer";
+import {removeFromLargestCity, setLargestCity} from "../../../store/reducers/favourites/favouriteSlice";
 import { getNoteKey } from "../../../helpers/getNoteKey";
+import {clearNotes} from "../../../store/reducers/notes/notesSlice";
 
 const LargestCities = () => {
   const dispatch = useAppDispatch();
@@ -33,6 +33,7 @@ const LargestCities = () => {
       let proceedings = prompt(`This location have notes attached to it\nType ${selected.location.name} to continue deletion.`, "");
       if (proceedings === selected.location.name) {
         dispatch(removeFromLargestCity({ data: selected }));
+        dispatch(clearNotes({ key: noteKey }));
       } else {
         alert('Incomplete! name did not match.')
       }

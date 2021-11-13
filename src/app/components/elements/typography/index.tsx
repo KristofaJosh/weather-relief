@@ -12,7 +12,7 @@ const Typography: TypographyBase = ({
 }) => {
   return (
     <p
-      className={`${style.text} ${level ?? ""} ${className ?? ""}`}
+      className={`${style.text} ${level ?? ""} ${className ?? ""}`.trim()}
       style={{ fontWeight: weight, ...cssStyle }}
       {...props}
     >
@@ -34,7 +34,7 @@ const Heading: TextHeadingsComponent = ({
     {
       ...props,
       fontWeight: weight,
-      className: `${style.text} ${size ?? ""} ${className ?? ""}`,
+      className: `${style.text} ${size ?? ""} ${className ?? ""}`.trim(),
     },
     children
   );

@@ -6,7 +6,7 @@ import api from "../../../../utils/apis";
 import {
   addToFavourites,
   removeFromFavourites,
-} from "../../../store/reducers/favourites/fav.reducer";
+} from "../../../store/reducers/favourites/favouriteSlice";
 import style from "./menu.module.scss";
 import {
   IconGlobe,

@@ -27,15 +27,15 @@ const Home = () => {
   return (
     <div className={`container ${style.page} ${style.page__home}`}>
       <div className={style.page__greeting}>
-        <div className={style.page__greeting_message}>
+        <section className={style.page__greeting_message}>
           <Typography level={"large"} weight={600}>
             <span style={{ fontSize: "var(--f32)" }}>{x}</span> <br /> {y}
           </Typography>
           <Typography weight={600} level={"f18"}>
             {new Date().toDateString()}
           </Typography>
-        </div>
-        <div>
+        </section>
+        <section>
           <div className="div-p-decorate">
             <Typography weight={600}>Notes</Typography>
           </div>
@@ -59,7 +59,7 @@ const Home = () => {
               {weather.myLocation.location.name}.
             </Typography>
           )}
-        </div>
+        </section>
       </div>
       <CurrentLocationDetailCard />
       <LargestCities />

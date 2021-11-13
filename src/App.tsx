@@ -11,7 +11,7 @@ import FloatingMenu from "./app/components/molecules/floatingMenu";
 function App() {
 
     return (
-        <div
+        <main
             className={'App'}
             style={{
                 background: `url(${backgroundRender()}) no-repeat center`,
@@ -27,7 +27,7 @@ function App() {
                 <Route path={"*"} element={<NotFound/>}/>
             </Routes>
             <FloatingMenu />
-        </div>
+        </main>
     );
 }
 
